@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="/css/style_menu.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
@@ -38,11 +39,46 @@
 
 <section class="mon-espace-area" id="mon-espace">
 
-	<h1>Mon espace</h1>
 
-	Bienvenue <span sec:authentication="principal.username"></span>
+	<div class="wrapper">
+		<div class="left">
+			<img src="https://refugedulacdulou.com/wp-content/uploads/2019/01/avatar-anonyme.png"
+				 alt="user" width="100">
+			<h4>RAKO Zaza</h4>
+			<span sec:authentication="principal.username"></span>
 
-	ique tenetur vitae. Aldsduam amet t excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.
+		</div>
+		<div class="right">
+			<div class="info">
+				<h3>Informations</h3>
+				<div class="info_data">
+
+					<div class="data">
+						<h4>Mot de passe actuel</h4>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<p>blablabla</p>
+					</div>
+					<div class="data">
+						<h4>Modifier le mot de passe</h4>
+						<p>blablabla</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="projects">
+				<h3>Rendez-vous</h3>
+				<div class="projects_data">
+					<div class="data">
+						<h4>Mes Rendez-vous</h4>
+						<p>Mes rdv <a href="#calendrier">prendre un rdv</a> ?</p>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
 
 </section>
 
@@ -50,9 +86,413 @@
 
 <section class="medecins-area" id="medecins">
 
-	<h1>Medecins</h1>
 
-	ique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.
+	<div class="wrapper">
+		<div class="header">
+			<div class="title">
+				Recherche des medecins
+			</div>
+
+			<div class="search_box">
+				<input type="text" id="search_input" placeholder="Filtrer par la spécialité">
+			</div>
+		</div>
+
+		<div class="table_wrap">
+			<div class="table_header">
+				<ul>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>NOM</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+							<div class="age">
+								<span>AGE</span>
+							</div>
+
+							<div class="ville">
+								<span>VILLE</span>
+							</div>
+
+
+
+							<div class="specialite">
+								<span>SPECIALITE</span>
+							</div>
+
+
+							<div class="tarif">
+								<span>TARIF</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="table_body">
+				<ul>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>STAN Smith</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>35 ans</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Médecin généraliste</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>25€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>GENDRE Guillaume</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>44 ans</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Endocrinologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>70€</span>
+
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>CHEROUALI Rayane</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>32 ans</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Marseille</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Ophtalmologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>50€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>RAKOTOBE Känza</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>56 ans</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div>&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Pédiatre</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>25€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>LOEDEL Pierric</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>49 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Médecin généraliste</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>23€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>NADAUD Edouard</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>37 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Marseille</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Dentiste</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>100€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>PETAN Jules</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>60 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Cardiologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>70€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>MATTIEWS Anais</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>51 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Acuponcteur</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>25€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>ARMAND Sarah</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>48 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Marseille</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Acuponcteur</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>70€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>ZIDANE John</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>29 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Médecin généraliste</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>30€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>CROSS Christelle</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>63 ans </span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Ostéopathe</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>50€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>LEHMANN Jack</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>27 ans </span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Marseille</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Dermatologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>45€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>RAY Richard</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>64 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Chirurgien viscéral</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>90€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>OLIVER Marie</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>32 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Dermatologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>36€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>TARDU Marc</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>55 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Marseille</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Ophtalmologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>40€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>MAX Johnson</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>41 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Paris</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Dermatologue</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>55€</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="nom">
+								<span>VASSIA Célia</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="age">
+								<span>66 ans</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="ville">
+								<span>Lyon</span>
+							</div> &nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="specialite">
+								<span>Pédiatre</span>
+							</div>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<div class="tarif">
+								<span>30€</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="/templates/scripts.js"></script>
+
+	</div>
+
 
 </section>
 
