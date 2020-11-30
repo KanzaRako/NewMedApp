@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="/css/style_menu.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
 </head>
 <body>
 
@@ -19,7 +21,7 @@
 			<a href="#accueil"><i class="fas fa-home accueil"></i>Accueil</a>
 			<a href="#mon-espace"><i class="fas fa-align-left profil"></i>Mon espace</a>
 			<a href="#medecins"><i class="fas fa-hospital medecin"></i>Medecins</a>
-			<a href="#calendrier"><i class="fas fa-calendar calendrier"></i>Calendrier</a>
+			<a href="#calendrier"><i class="fas fa-calendar calendrier"></i>Mes Rendez-vous</a>
 			<a href="#informations"><i class="fas fa-info contact"></i>Informations</a>
 			<!-- <li sec:authorize="isAuthenticated()">--><a th:href="@{/logout}"><i class="fas fa-sign-out-alt deconnexion"></i>Logout</a><!--</li>-->
 		</nav>
@@ -83,11 +85,11 @@
 					<div class="data">
 						<h4>Mot de passe actuel</h4>
 
-						<p>blablabla</p>
 					</div>
 					<div class="data">
 						<h4>Modifier le mot de passe</h4>
-						<p>blablabla</p>
+
+
 					</div>
 				</div>
 			</div>
@@ -315,23 +317,220 @@
 	</p>
 </section>
 
-<section class="informations-area" id="informations">
+<section id="informations" class="informations-area">
 
-	<h1>Informations</h1>
-	<p>
-		TU DOIS MODIF CA.tatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid atque commodi dolor
-		est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum pariatur sequi
-		similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae nemo
-		officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing
-		elit. A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem
-		fugiat harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum
-		molestiae nemo officiis placeat quos repellat saepe temporibus voluptatum.
-	</p>
-</section>
+	<div class="container">
 
-<footer>
-	contact contact
-</footer>
+		<div class="section-title">
+			<h2>Informations</h2>
+			<p>Informations spécialités médiacles proposées</p>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-3">
+				<ul class="nav nav-tabs flex-column">
+					<li class="nav-item">
+						<a class="nav-link active show" data-toggle="tab" href="#tab-1">Médecin géneraliste</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#tab-2">Osthéopathe</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#tab-3">Dermatologue</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#tab-4">Chirurgien viséral</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#tab-5">Ophtalmologue</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#tab-6">Pédiatre</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-9 mt-4 mt-lg-0">
+				<div class="tab-content">
+					<div class="tab-pane active show" id="tab-1">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Médecin géneraliste</h3>
+								<p class="font-italic">Médecin proposé : M.STAN Smith</p>
+								<p>Le métier de Médecin généraliste consiste à détecter les maux de ses patients et leur
+									prescrire des médicaments adaptés. Le médecin généraliste est à la base de la chaîne médicale.
+									Lors de la consultation, il interroge le patient, prend connaissance des symptômes. Il peut être
+									amené à ausculter le patient par palpation ou par le biais d’instruments pour la prise de la tension
+									par exemple. Dans certains cas, le médecin généraliste les oriente vers un spécialiste</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/departments-1.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-2">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Osthéopathe</h3>
+								<p class="font-italic">Médecin proposé : Mme.CROSS Christelle </p>
+								<p>L’ostéopathe recueille le maximum d’informations sur les troubles ou douleurs décrites et fait le bilan des antécédents et
+									traitements médicaux du patient (maladies, accidents, opérations, traumatismes…). Il incite
+									ce dernier à fournir une description précise des symptômes ressentis. Le praticien passe ensuite
+									à la phase active de son acte thérapeutique en pratiquant des palpations et massages lents et
+									minutieux sur le corps du patient. Il recherche les points de blocage ou douloureux sur des
+									membres, des articulations, des viscères, sur la colonne vertébrale. Dans certains cas il a
+									recours à des rotations, des tractions, des poussées ou des étirements sans aucune violence
+									gestuelle. Ce professionnel de santé n’utilise que ses mains et le toucher pour diagnostiquer et
+									traiter un mal occasionnel ou récurrent. Il détecte les tensions L’ostéopathe est surtout
+									consulté pour des problèmes d’origine vertébrale (lombalgie), des entorses, tendinites, mais
+									aussi de stress ou suite à une opération chirurgicale. Il traite également des troubles
+									digestifs, ORL ou urinaires.</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/departments-2.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-3">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Dermatologue</h3>
+								<p class="font-italic">Médecins proposés : M.LEHMANN Jack / Mme.OLIVIER Marie / M.MAX Johnson</p>
+								<p>Le dermatologue est le médecin spécialiste de la peau, des ongles et du cuir chevelu. Toutes
+									les affections cutanées sont de son ressort : acné, verrues, mais aussi brûlures, IST, cancers… Il peut
+									accomplir par ailleurs des actes chirurgicaux.L’acné chez l’adolescent(e), l’eczéma, le psoriasis,
+									les kystes cutanés, les verrues, les grains de beauté suspects, l’herpès buccal ou génital,
+									les démangeaisons, l’urticaire ou encore la couperose… Ces pathologies, les plus courantes, sont
+									traitées directement au cabinet du dermatologue. Les diagnostics qu’il délivre, les traitements
+									qu’il prescrit et les examens plus approfondis qu’il recommande de faire à l’hôpital, en service
+									spécialisé, concernent toutes les catégories d’âge, du nourrisson au vieillard.</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/gallery-5.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-4">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Chirurgien viséral</h3>
+								<p class="font-italic">Médecin proposé : M.RAY Richard</p>
+								<p>Le chirurgien est un spécialiste qui pratique des interventions chirurgicales (opérations) qui peuvent
+									concerner toutes les parties du corps : tumeurs, fractures, organes défectueux, hémorragies,
+									transplantations, etc. Après avoir fait réaliser des examens préliminaires, le chirurgien décide, en
+									accord avec le patient et les autres professionnels de santé (sauf en cas d’urgence), s’il faut opérer ou
+									non, à la suite de quoi il définit le mode d’intervention opératoire. Le cœur de métier du chirurgien a
+									pour cadre le bloc opératoire (ou « salle d’op » aseptisée) d’un centre hospitalier ou d’une clinique.
+									Durant l’intervention, qui peut durer plusieurs heures en fonction de l’opération, il est entouré de
+									toute une équipe de spécialistes : anesthésistes, infirmières de bloc opératoire, réanimateurs.</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/gallery-1.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-5">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Ophtalmologue</h3>
+								<p class="font-italic">Médecin proposé : M.TARDU Marc</p>
+								<p>L’ophtalmologie est une spécialité très riche qui va bien au-delà de la prescription de
+									collyres et de verres correcteurs ! En effet, l’œil peut être le révélateur de plusieurs
+									maladies (diabète, hypertension, maladies infectieuses…) : la veille médicale de l’ophtalmologue
+									est donc primordiale pour une prise en charge rapide et efficace des pathologies. Il effectue
+									aussi des tâches plus techniques de mesure et des calculs avec différents appareils électroniques.
+									Ce métier exige donc des connaissances pointues dans diverses spécialités (traumatologie, neurologie,
+									diabétologie…). L’ophtalmologue est aussi appelé ophtalmologiste ou oculiste.</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/departments-5.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-6">
+						<div class="row">
+							<div class="col-lg-8 details order-2 order-lg-1">
+								<h3>Pédiatre</h3>
+								<p class="font-italic">Médecin proposé : Mme.VASSIA Célia</p>
+								<p>Le pédiatre assure la prise en charge globale de l'enfant. Le pédiatre intervient à
+									la maternité, dès la naissance de l’enfant, pour contrôler réflexes, mobilité, position
+									des hanches et souplesse. Dans ce cadre, le pédiatre dépiste d’éventuelles anomalies
+									anatomiques, sensorielles ou psychiques. Dans son cabinet, il pratique les vaccinations
+									obligatoires ou conseillées par les autorités de santé. Le pédiatre dépiste et traite
+									toutes les maladies infantiles auxquelles peu de sujets échappent au cours de leur
+									croissance : varicelle, rhinopharyngite, angine, rougeole, oreillons.</p>
+							</div>
+							<div class="col-lg-4 text-center order-1 order-lg-2">
+								<img src="/img/doctors-2.jpg" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+</section><!-- End Informations Section -->
+
+</main><!-- End #main -->
+<footer id="footer">
+
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 col-md-6 footer-contact">
+					<h3>NewMedapp</h3>
+					<p>
+						CHEROUALI Rayane <br>
+						RAKOTOBE Känza<br>
+
+						<strong>Lieu:</strong> ESIEA PARIS<br>
+
+					</p>
+				</div>
+
+				<div class="col-lg-2 col-md-6 footer-links">
+					<h4>Liens</h4>
+					<ul>
+						<li> <a href="#accueil"><i class="fas fa-home accueil"></i>Accueil</a></li>
+						<li> <a href="#mon-espace"><i class="fas fa-align-left profil"></i>Mon espace</a></li>
+						<li> <a href="#medecins"><i class="fas fa-hospital medecin"></i>Medecins</a></li>
+						<li> <a href="#calendrier"><i class="fas fa-calendar calendrier"></i>Mes Rendez-vous</a></li>
+						<li> <a href="#informations"><i class="fas fa-info contact"></i>Informations</a></li>
+						<li> <a th:href="@{/logout}"><i class="fas fa-sign-out-alt deconnexion"></i>Logout</a></li>
+
+
+					</ul>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container d-md-flex py-4">
+
+		<div class="mr-md-auto text-center text-md-left">
+			<div class="copyright">
+				&copy; Copyright <strong><span>NewMedapp</span></strong>. All Rights Reserved
+			</div>
+			<div class="credits">
+
+				Designed by <a href="https://github.com/KanzaRako/NewMedApp">CHEROUALI Rayane et RAKOTOBE Känza</a>
+			</div>
+		</div>
+
+	</div>
+</footer><!-- End Footer -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -340,5 +539,7 @@
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <script src="/script/scripts.js"></script>
 <script src="/script/menu.js"></script>
+
+
 </body>
 </html>
