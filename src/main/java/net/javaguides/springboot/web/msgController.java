@@ -29,7 +29,7 @@ public class msgController {
         msg MESG  = new msg (newmsg.getId(), newmsg.getNom(), newmsg.getPrenom(), newmsg.getTel(), newmsg.getAge(), newmsg.getRdv(), newmsg.getDate());
         daOmsg.save(MESG);
 
-    return "index";
+    return "redirect:/";
 
 }
 
@@ -39,7 +39,7 @@ public class msgController {
     public String del_msg(@PathVariable Long id){
         daOmsg.deleteById(id);
 
-    return "index";
+    return "redirect:/";
 
 }
 
