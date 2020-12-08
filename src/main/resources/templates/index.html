@@ -301,21 +301,83 @@
 	</div>
 </section>
 
-
 <section class="calendrier-area" id="calendrier">
 
-	<h1>Calendrier</h1>
-	<p>
-		ique tenetur vitae. Aliquam amet est excepturi, exercitatxsionem facere fugit ipsa laborum molestiae nemo officiis
-		placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid
-		atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat harum
-		pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae
-		nemo officiis placeat quos repellat saepe temporibus voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-		A aliquid atque commodi dolor est nobis veniam! Eius rerum, unde. Accusamus corporis esse eveniet exercitationem fugiat
-		harum pariatur sequi similique tenetur vitae. Aliquam amet est excepturi, exercitationem facere fugit ipsa laborum molestiae
-		nemo officiis placeat quos repellat saepe temporibus voluptatum.
-	</p>
+
+	<div class="rdv-section">
+
+		<h1>Prise de rendez-vous</h1>
+		<div class="border"></div>
+		<form   th:action="@{/}"  th:object="${nvx_msg}"   class="rdv-form" method="POST">
+
+				<input type="text" th:field="*{nom}" class="rdv-form-text" placeholder="Nom">
+
+				<input type="text" th:field="*{prenom}" class="rdv-form-text" placeholder="Prénom">
+
+				<input type="text" th:field="*{tel}" class="rdv-form-text" placeholder="Téléphone">
+
+				<input type="number" th:field="*{age}" min="2" max="99" class="rdv-form-text" placeholder="Âge">
+
+			<!--	<input type="text" th:field="*{rdv}" class="rdv-form-text" placeholder="Type de rendez-vous">-->
+
+
+				<select  th:field="*{rdv}" class="rdv-form-text" >
+					<option th:value="a">Liste des médecins</option>
+					<option th:value="généraliste">STAN Smith, 35 ans, médecin généraliste à Paris, 25 euros</option>
+					<option th:value="ostéopathe">CROSS Christelle, 63 ans, ostéopathe à Lyon, 50 euros</option>
+					<option th:value="dermatologue">LEHMANN Jack, 27 ans, dermatologue à Marseille, 45 euros</option>
+					<option th:value="chirurgien">RAY Richard, 64 ans, chirurgien viscéral à Paris, 90 euros</option>
+					<option th:value="dermatologue">OLIVER Marie, 32 ans, dermatologue à Lyon, 36 euros</option>
+					<option th:value="ophtalmologue ">TARDU Marc, 55 ans, ophtalmologue à Marseille, 45 euros</option>
+					<option th:value="dermatologue">MAX Johnson, 41 ans, dermatologue à Paris, 55 euros</option>
+					<option th:value="pediatre">VASSIA Célia, 66 ans, pediatre à Lyon, 30 euros</option>
+				</select>
+
+
+
+			<label class="rdv-form-text">Date de rendez-vous:             <input type="date" th:field="*{date}"></label>
+
+
+			<input type="submit"  class="rdv-form-btn" value="Prendre un rendez-vous">
+		</form>
+	</div>
+
+
+
+
+	<!--********    affichage rdv    ********/-->
+
+	<table class="tabrdv-style">
+		<thead>
+		<tr>
+			<th>Nom du Patient</th>
+			<th>Prénom du Patient</th>
+			<th>Tél</th>
+			<th>Âge du patient</th>
+			<th>Type de rendez-vous</th>
+			<th>Date de rendez-vous</th>
+			<th>Annuler un rendez-vous</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr    th:each="mymsg:${list_msg}">
+			<td><p th:text="${mymsg.nom}">th:text></p></td>
+			<td><p th:text="${mymsg.prenom}">th:text></p></td>
+			<td><p th:text="${mymsg.tel}">th:text></p></td>
+			<td><p th:text="${mymsg.age}">th:text></p></td>
+			<td><p th:text="${mymsg.rdv}">th:text></p></td>
+			<td><p th:text="${mymsg.date}">th:text></p></td>
+				<td><form action="#" th:action="@{'/{id}'(id=${mymsg.id})}" th:method="delete" >
+					<input type="submit" name="_method" value="delete" class="rdv-form-btn-2" />
+
+				</form><td>
+
+		</tr>
+		</tbody>
+	</table>
+
 </section>
+
 
 <section id="informations" class="informations-area">
 
@@ -474,9 +536,8 @@
 
 
 
-</section><!-- End Informations Section -->
+</section>
 
-</main><!-- End #main -->
 <footer id="footer">
 
 	<div class="footer-top">
@@ -528,7 +589,7 @@
 		</div>
 
 	</div>
-</footer><!-- End Footer -->
+</footer>
 <div id="preloader"></div>
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
@@ -539,6 +600,8 @@
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <script src="/script/scripts.js"></script>
 <script src="/script/menu.js"></script>
+
+
 
 
 </body>
