@@ -40,7 +40,7 @@
 				<img class="d-block w-100" src="https://images.pexels.com/photos/355934/pexels-photo-355934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="First slide">
 				<div class="carousel-caption d-none d-md-block">
 					<h5>Bienvenue sur NewMedApp</h5>
-					<p>Une interface simple, pour une prise de rendez-vous rapide et simple !</p>
+					<p>Une interface pratique, pour une prise de rendez-vous rapide et simple !</p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -70,40 +70,18 @@
 </section>
 
 <section class="mon-espace-area" id="mon-espace">
-	<div class="wrapper">
-		<div class="left">
-			<img src="https://refugedulacdulou.com/wp-content/uploads/2019/01/avatar-anonyme.png"
-				 alt="user" width="100">
-			<h4>RAKO Zaza</h4>
-			<span sec:authentication="principal.username"></span>
-		</div>
-		<div class="right">
-			<div class="info">
-				<h3>Informations</h3>
-				<div class="info_data">
 
-					<div class="data">
-						<h4>Mot de passe actuel</h4>
-
-					</div>
-					<div class="data">
-						<h4>Modifier le mot de passe</h4>
-
-
-					</div>
-				</div>
-			</div>
-			<div class="projects">
-				<h3>Rendez-vous</h3>
-				<div class="projects_data">
-					<div class="data">
-						<h4>Mes Rendez-vous</h4>
-						<p>Mes rdv <a href="#calendrier">prendre un rdv</a> ?</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="left">
+		<h4>Session: <span sec:authentication="principal.username"></span></h4>
 	</div>
+
+	<h1>Mon espace</h1>
+
+		<p class="info">Bienvenue sur NewMepApp, un moyen simple et rapide pour prendre vos rendez-vous médicaux.
+			Si vous souhaitez avoir de plus amples informations sur nos médecins, vous pouvez vous diriger sur l'onglet <a href="#medecins">Médecins</a>
+			ou encore l'onglet <a href="#informations">Informations</a> qui vous informera sur les différentes spécialités.<br>
+			<a href="#calendrier">Prendre un rdv ?</a></p>
+
 </section>
 
 <section class="medecins-area" id="medecins">
@@ -368,9 +346,9 @@
 			<td><p th:text="${mymsg.rdv}">th:text></p></td>
 			<td><p th:text="${mymsg.date}">th:text></p></td>
 				<td><form action="#" th:action="@{'/{id}'(id=${mymsg.id})}" th:method="delete" >
-					<input type="submit" name="_method" value="delete" class="rdv-form-btn-2" />
+					<input type="submit" name="_method" value="Supprimer un rendez-vous" class="rdv-form-btn-2" />
 
-				</form><td>
+				</form></td>
 
 		</tr>
 		</tbody>
