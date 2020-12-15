@@ -1,0 +1,17 @@
+create database demo;
+SET GLOBAL time_zone = '+2:00';
+
+DROP TABLE CUSTOMER;
+
+CREATE TABLE CUSTOMER
+(
+id bigint not null primary key,
+ville varchar(255),
+age int,
+prenom varchar(255),
+nom varchar(255),
+pseudo varchar(255),
+password varchar(255)
+);
+alter table demo.msg drop primary key, add primary key (id);  
+
